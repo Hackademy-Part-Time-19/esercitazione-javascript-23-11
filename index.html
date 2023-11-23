@@ -11,7 +11,7 @@
     <script>
         let continua = true;
         let lista = [];
-        while (continua) {
+        while (continua != 7) {
 
             let sceltaLista = parseInt(prompt('seleziona un\'azione: \nPremi 1 per aggiungere un elemento alla lista\nPremi 2 per eliminare un elemento alla lista\nPremi 3 per ordinare la lista\n Premi 4 per modificare la lista\nPremi 5 per eliminare tutta la lista\nPremi 6 per visualizzare la lista'))
             switch (sceltaLista) {
@@ -43,10 +43,12 @@
                     alert('lista attuale : ' + lista)
                     break;
 
+
                 default:
                     alert('Scelta non valida')
 
             }
+            alert('Hai chiuso la lista')
 
 
 
