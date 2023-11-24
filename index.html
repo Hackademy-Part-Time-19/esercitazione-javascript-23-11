@@ -78,15 +78,20 @@
                 let continuaModifica = true;
                 while (continuaModifica) {
                     let modificaElemento = prompt('Inserisci l\'elemento da modificare (o premi Cancel per terminare):');
-
-                    let indiceModifica = lista.indexOf(modificaElemento);
-                    if (modificaElemento !== -1) {
-                        let nuovoElemento = prompt('Inserisci nuovo elemento');
-                        lista[indiceModifica] = nuovoElemento
-                        alert('Lista attuale : ' + lista)
+                    if (modificaElemento === null || modificaElemento === undefined) {
+                        continuaModifica = false;
+                    } else {
+                        let indiceModifica = lista.indexOf(modificaElemento);
+                        if (modificaElemento !== -1) {
+                            let nuovoElemento = prompt('Inserisci nuovo elemento');
+                            lista[indiceModifica] = nuovoElemento
+                            alert('Lista attuale : ' + lista)
+                        } else {
+                            alert('elemento non trovato')
+                        }
                     }
-
                 }
+                return sceltaLista
             }
             function eliminaLista() {
                 alert('lista attuale : ' + lista)
